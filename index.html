@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro Hacker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Mostrar los mensajes -->
+        <div class="forum-posts" id="posts-container">
+            <!-- Los mensajes se cargarán aquí con JavaScript -->
+        </div>
+
+        <!-- Formulario para enviar un mensaje -->
+        <form id="message-form" action="/submit" method="POST" enctype="multipart/form-data">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="message">Tu mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <label for="file">Sube un archivo (Imagen o Zip):</label>
+            <input type="file" id="file" name="file" accept=".jpg, .png, .zip">
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
